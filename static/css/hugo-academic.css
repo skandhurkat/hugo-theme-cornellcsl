@@ -44,11 +44,6 @@ body {
   height: 100%;
   width: 100%;
 }
-@media screen and (max-width: 1200px) { /* Match max-width of .nav-bar query. */
-  body {
-    margin-top: 51px; /* Offset body content by navbar height. */
-  }
-}
 @media (min-width:767px) {
   .navbar {
     padding:20px 0;
