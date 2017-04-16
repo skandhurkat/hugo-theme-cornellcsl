@@ -864,6 +864,11 @@ footer a#back_to_top i {
  *  Navigation Bar
  **************************************************/
 
+.navbar.affix {
+  top:0;
+  width:100%;
+  z-index:9999!important
+}
 .navbar {
   border: 0px;
   border-radius: 0px;
