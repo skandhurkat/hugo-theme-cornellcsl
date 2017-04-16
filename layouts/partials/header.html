@@ -69,7 +69,7 @@
     <div class="container">
         <div class="row">
             <div class="col-xs-10 cu-csl-logo-div">
-		    <img src="{{ .Site.BaseURL }}img/org-logo.svg"
+		    <img src="{{ "img/org-logo.svg" | relURL }}"
                 class="img-responsive"
                 alt="{{ $.Site.Params.organization | html }}"
 		style="margin: 0;" />
