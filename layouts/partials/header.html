@@ -49,3 +49,41 @@
 
 </head>
 <body id="top" data-spy="scroll" data-target="#navbar-main" data-offset="71">
+
+    <!-- Page header -->
+    <a class="sr-only" href="#content">Skip to main content</a>
+    <header id="top" class="cu-banner">
+    <div class="container">
+        <form action="//{{ .Site.Params.search_url }}" id="cu-search"
+        method="get" role="search" class="collapse">
+        <div class="input-group col-xs-12">
+            <input autocomplete="off" id="search-query" name="q"
+            placeholder="{{ .Site.Params.search_placeholder | html }}"
+            required type="search" class="col-xs-12 cu-search-box">
+            <label for="search-query" class="sr-only">
+                 {{ .Site.Params.search_placeholder | html }}
+            </label>
+        </div>
+        </form>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-10 cu-csl-logo-div">
+                <img src="images/org-logo.svg"
+                class="img-responsive"
+                alt="{{ $.Site.Params.organization | html }}" />
+            </div>
+            <div class="col-xs-2 col-middle cu-search-toggle-div">
+                <span class="pull-right">
+                    <button class="btn btn-cu-banner" type="button"
+                    data-toggle="collapse" data-target="#cu-search"
+                    id="cu-search-toggle" style="position:relative;">
+                        <span class="sr-only">Toggle search</span>
+                        <span class="cu-search-toggle glyphicon glyphicon-search">
+                        </span>
+                    </button>
+                </span>
+            </div>
+        </div>
+    </div>
+    </header>
