@@ -12,6 +12,15 @@ image_preview = ""
 # List of authors or collaborators for the project
 authors = []
 
+# Optional link to project code
+url_code = ""
+
+# Optional link to project report/PDF
+url_pdf = ""
+
+# Optional link to project report/PDF relative to /files
+url_pdf_rel = ""
+
 # Optional external URL for project (replaces project detail page).
 external_link = ""
 
