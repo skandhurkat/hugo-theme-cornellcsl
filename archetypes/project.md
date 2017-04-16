@@ -9,6 +9,9 @@ summary = ""
 # Optional image to display on homepage.
 image_preview = ""
 
+# List of authors or collaborators for the project
+authors = []
+
 # Optional external URL for project (replaces project detail page).
 external_link = ""
 

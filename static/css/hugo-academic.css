@@ -512,6 +512,11 @@ article {
   margin-bottom: 0;
 }
 
+.article .pub-authors {
+  font-style: italic;
+  line-height: 30px; /* Match share bar line height. */
+}
+
 #comments {
   padding-top: 1rem;
 }
