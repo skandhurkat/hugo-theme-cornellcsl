@@ -533,6 +533,10 @@ article {
   margin-right: auto;
 }
 
+.pub {
+  padding-top: 150px;
+}
+
 .pub .pub-title {
   margin-bottom: 5px;
 }
