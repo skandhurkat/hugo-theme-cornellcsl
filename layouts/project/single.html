@@ -10,9 +10,7 @@
   </div>
   {{end}}
 
-  <div class="article-container">
-
-    <div class="pub-title">
+    <div class="container pub-title">
       <h1 itemprop="name">{{ .Title }}</h1>
       <span class="pub-authors" itemprop="author">
       {{ with .Params.authors }}
@@ -28,10 +26,28 @@
     <a class="btn btn-primary btn-outline" href="{{ . }}" target="_blank">{{ i18n "open_project_site" }}</a>
     {{ end }}
 
+  <div class="article-container">
+
     <div class="article-style" itemprop="articleBody">
       {{ .Content }}
     </div>
 
+    <div class="col-sm-1"></div>
+    <div class="col-sm-10">
+      <div class="row">
+        <div class="col-xs-12 col-sm-3 pub-row-heading" style="line-height:34px;">{{ i18n "links" }}</div>
+        <div class="col-xs-12 col-sm-9">
+
+          {{ partial "project_links" (dict "content" . "is_list" 0) }}
+
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-1"></div>
+  </div>
+  <div class="visible-xs space-below"></div>
+
+  <div class="space-below"></div>
   </div>
 </article>
 
