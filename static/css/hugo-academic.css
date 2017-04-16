@@ -780,8 +780,8 @@ footer a#back_to_top i {
  **************************************************/
 
 .btn-primary {
-  border-color: #ef4035;
-  background: #ef4035;
+  border-color: rgba(179,27,27,0.8);
+  background: rgba(179,27,27,0.8);
 }
 
 .btn-primary:hover,
@@ -812,7 +812,7 @@ footer a#back_to_top i {
 
 .btn-toolbar .btn.btn-primary:hover,
 .btn-toolbar .btn.btn-primary:focus {
-  background-color: rgba(239,64,53,0.6);
+  background-color: rgba(179,27,27,0.6);
 }
 
 .btn-toolbar .btn.btn-primary:active,
