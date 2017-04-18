@@ -185,9 +185,14 @@ blockquote p:last-child {
   }
 }
 
+@media screen and (min-width: 768px) {
+  .universal-wrapper {
+    padding-top: 75px;
+  }
+}
+
 .universal-wrapper {
   margin: 0 auto;
-  padding-top: 150px;
   padding-right: 15px;
   padding-left: 15px;
   width: 100%;
@@ -403,10 +408,15 @@ ul.share li:hover .fa {
  *  Blog Articles
  **************************************************/
 
+@media screen and (min-width: 768px) {
+  article {
+    padding-top: 75px;
+  }
+}
+
 article {
   animation: intro 0.3s both;
   animation-delay: 0.15s;
-  padding-top: 150px;
 }
 
 .article-container {
@@ -540,8 +550,10 @@ article {
   margin-right: auto;
 }
 
-.pub {
-  padding-top: 150px;
+@media screen and (min-width: 768px) {
+  .pub {
+    padding-top: 75px;
+  }
 }
 
 .pub .pub-title {
