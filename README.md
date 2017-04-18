@@ -1,3 +1,25 @@
+# Cornell CSL colours for [Academic theme](https://github.com/gcushen/hugo-academic) by George Cushen
+
+Modifications Copyright 2017, Skand Hurkat
+
+**CornellCSL** is an update to the Academic theme by George Cushen for
+Hugo. The updates comprise
+
+ - Colours have been changed to the Cornell theme.
+
+ - A header has been added.
+
+ - Navbar affixes to the top of the page when scrolling past the header.
+
+ - Navbar shrinks in size after it gets affixed.
+
+ - Email addresses in the contact widget are obfuscated using Base64
+   encoding and javascript.
+
+ - Favicons can be overridden in `config.toml`.
+
+ - Other CSS fixes to pretty everything up.
+
 # Academic: the personal website framework for [Hugo](https://gohugo.io)
 
 **Academic** is a framework to help you create a beautiful website quickly. Perfect for personal, student, or academic websites. [Check out the latest demo](http://gcushen.github.io/hugo-academic-demo/) of what you'll get in less than 10 minutes.
