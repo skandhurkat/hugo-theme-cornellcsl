@@ -888,6 +888,7 @@ footer a#back_to_top i {
   z-index:9999!important
 }
 .navbar {
+  z-index: 9999 !important;
   border: 0px;
   border-radius: 0px;
   min-height: 70px !important;
