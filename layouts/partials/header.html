@@ -36,7 +36,6 @@
   {{ end }}
 
   <link rel="alternate" href="{{ .RSSLink | default .Site.RSSLink  }}" type="application/rss+xml" title="{{ .Site.Title }}">
-  <link rel="feed" href="{{ .RSSLink | default .Site.RSSLink }}" type="application/rss+xml" title="{{ .Site.Title }}">
 
   <link rel="icon" type="image/png" href="{{ index .Site.Params "icon" | default "/img/icon.png" | relURL }}">
   <link rel="apple-touch-icon" type="image/png" href="{{ index .Site.Params "apple_touch_icon" | default "/img/apple-touch-icon.png" | relURL }}">
