@@ -18,14 +18,12 @@
         <i class="fa-li fa fa-envelope fa-2x" aria-hidden="true"></i>
         <span>
 	<script type="text/javascript">
-	<!--
 	h='{{ . | base64Encode }}';
 	{{- if $autolink }}
 	document.write('<a h'+'ref'+'='+'m'+'ai'+'lt'+'o:'+atob(h)+'>'+atob(h)+'<\/'+'a>');
         {{ else }}
 	document.write(atob(h));
         {{ end -}}
-	// -->
 	</script>
 	<noscript>Please enable Javascript to view this content</noscript>
 	</span>
