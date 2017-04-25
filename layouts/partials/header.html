@@ -52,19 +52,21 @@
     <!-- Page header -->
     <a class="sr-only" href="#content">Skip to main content</a>
     <header id="top" class="cu-banner">
+    {{ if .Site.Params.search_url }}
     <div class="container">
-        <form action="//{{ .Site.Params.search_url }}" id="cu-search"
+        <form action="{{ .Site.Params.search_url }}" id="cu-search"
         method="get" role="search" class="collapse">
         <div class="input-group col-xs-12">
             <input autocomplete="off" id="search-query" name="q"
-            placeholder="{{ .Site.Params.search_placeholder | html }}"
+            placeholder="{{ .Site.Params.search_placeholder | default "Search" | html }}"
             required type="search" class="col-xs-12 cu-search-box">
             <label for="search-query" class="sr-only">
-                 {{ .Site.Params.search_placeholder | html }}
+                 {{ .Site.Params.search_placeholder | default "Search" | html }}
             </label>
         </div>
         </form>
     </div>
+    {{ end }}
     <div class="container">
         <div class="row">
             <div class="col-xs-10 cu-csl-logo-div">
@@ -73,6 +75,7 @@
                 alt="{{ $.Site.Params.organization | html }}"
 		style="margin: 0;" />
             </div>
+	    {{ if .Site.Params.search_url }}
             <div class="col-xs-2 col-middle cu-search-toggle-div">
                 <span class="pull-right">
                     <button class="btn btn-cu-banner" type="button"
@@ -84,6 +87,7 @@
                     </button>
                 </span>
             </div>
+	    {{ end }}
         </div>
     </div>
     </header>
