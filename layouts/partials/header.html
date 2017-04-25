@@ -70,10 +70,16 @@
     <div class="container">
         <div class="row">
             <div class="col-xs-10 cu-csl-logo-div">
+	    {{ with .Site.Params.organization_url }}
+                <a href="{{ . }}" target="_blank">
+            {{ end }}
 		    <img src="{{ "img/org-logo.svg" | relURL }}"
-                class="img-responsive"
-                alt="{{ $.Site.Params.organization | html }}"
-		style="margin: 0;" />
+		        class="img-responsive"
+                        alt="{{ $.Site.Params.organization | html }}"
+		        style="margin: 0;" />
+            {{ with .Site.Params.organization_url }}
+                </a>
+            {{ end }}
             </div>
 	    {{ if .Site.Params.search_url }}
             <div class="col-xs-2 col-middle cu-search-toggle-div">
