@@ -56,7 +56,14 @@
     <div class="container">
         <form action="{{ .Site.Params.search_url }}" id="cu-search"
         method="get" role="search" class="collapse">
+        {{ $search_params := .Site.Params.search_params }}
+        {{ $len_params := (div (len $search_params) 2) }}
+        {{ range $i, $foo := (seq ($len_params)) }}
+        {{ $key_index := (mul 2 $i) }} {{ $val_index := (add (mul 2 $i) 1) }}
+        <input type="hidden" name="{{ index $search_params $key_index }}"
+        value="{{ index $search_params $val_index }}">
         <div class="input-group col-xs-12">
+            {{ end }}
             <input autocomplete="off" id="search-query" name="q"
             placeholder="{{ .Site.Params.search_placeholder | default "Search" | html }}"
             required type="search" class="col-xs-12 cu-search-box">
