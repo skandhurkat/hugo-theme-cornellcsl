@@ -6,6 +6,11 @@
   {{ i18n "btn_details" }}
 </a>
 {{ end }}
+{{ with $.Params.doi }}
+<a class="btn btn-primary btn-outline btn-xs" href="//dx.doi.org/{{ . }}" target="_blank" itemprop="sameAs">
+  DOI
+</a>
+{{ end }}
 {{ with $.Params.url_pdf }}
 <a class="btn btn-primary btn-outline{{ if $is_list }} btn-xs{{end}}" href="{{ . | absURL }}">
   {{ i18n "btn_pdf" }}

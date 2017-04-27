@@ -35,6 +35,7 @@ image_preview = ""
 selected = false
 
 # Links (optional)
+doi = ""
 url_pdf = ""
 url_code = ""
 url_dataset = ""
