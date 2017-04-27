@@ -528,6 +528,10 @@ article {
   line-height: 30px; /* Match share bar line height. */
 }
 
+.article-authors {
+  font-style: italic;
+}
+
 #comments {
   padding-top: 1rem;
 }
