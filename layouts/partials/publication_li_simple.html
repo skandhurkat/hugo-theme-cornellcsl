@@ -1,5 +1,16 @@
 <li itemscope itemtype="http://schema.org/ScholarlyArticle">
   <i class="fa-li fa fa-file-text-o pub-icon" aria-hidden="true"></i>
-  <span itemprop="name">{{ .Title }}</span>
+  <span class="pub-authors">
+    {{ with .Params.authors }}
+    <span itemprop="author">
+    {{- delimit . "</span>, <span itemprop=\"author\">" | markdownify -}}
+    {{ end }}
+    </span>,
+  </span>
+  <span itemprop="name"><i>{{ .Title | markdownify | plainify }}</i></span>, in
+  <span itemprop="isPartOf">{{ .Params.publication | markdownify }}</span>.
+  <time datetime = "{{ .Date.Format "2006-01-02" }}" itemprop="datePublished">
+    {{ .Date.Format "January, 2006" }}
+  </time>
   <p>{{ partial "publication_links" (dict "content" . "is_list" 1) }}</p>
 </li>
