@@ -36,6 +36,7 @@ selected = false
 
 # Links (optional)
 doi = ""
+arXiv = ""
 url_pdf = ""
 url_pdf_rel = ""
 url_code = ""

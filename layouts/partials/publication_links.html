@@ -11,6 +11,11 @@
   DOI
 </a>
 {{ end }}
+{{ with $.Params.arXiv }}
+<a class="btn btn-primary btn-outline{{ if $is_list }} btn-xs{{end}}" href="//arxiv.org/abs/{{ . }}" target="_blank" itemprop="sameAs">
+  arXiv
+</a>
+{{ end }}
 {{ with $.Params.url_pdf }}
 <a class="btn btn-primary btn-outline{{ if $is_list }} btn-xs{{end}}" href="{{ . | absURL }}">
   {{ i18n "btn_pdf" }}
