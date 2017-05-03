@@ -37,6 +37,7 @@ selected = false
 # Links (optional)
 doi = ""
 url_pdf = ""
+url_pdf_rel = ""
 url_code = ""
 url_dataset = ""
 url_project = ""
