@@ -12,7 +12,7 @@
 </a>
 {{ end }}
 {{ with $.Params.url_pdf_rel }}
-<a class="btn btn-primary btn-outline{{ if $is_list }} btn-xs{{end}}" href="{{ add "files/" . | relURL }}">
+<a class="btn btn-primary btn-outline{{ if $is_list }} btn-xs{{end}}" href="{{ . | relURL }}">
   {{ i18n "btn_pdf" }}
 </a>
 {{ end }}
