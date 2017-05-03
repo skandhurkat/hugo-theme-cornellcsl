@@ -4,7 +4,7 @@
     {{ with .Params.authors }}
     <span itemprop="author">
     {{- delimit . "</span>, <span itemprop=\"author\">" | markdownify -}}
-    {{ end }}
+    {{ end -}}
     </span>,
   </span>
   <span itemprop="name"><i>{{ .Title | markdownify | plainify }}</i></span>, in
