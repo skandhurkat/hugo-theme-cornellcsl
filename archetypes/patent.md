@@ -3,24 +3,13 @@
 # Authors. Comma separated list, e.g. `["Bob Smith", "David Jones"]`.
 authors = [""]
 
-# Publication type.
-# Legend:
-# 0 = Uncategorized
-# 1 = Conference proceedings
-# 2 = Journal
-# 3 = Work in progress
-# 4 = Technical report
-# 5 = Book
-# 6 = Book chapter
-publication_types = ["0"]
-
-# Publication name and optional abbreviated version.
-publication = ""
-publication_short = ""
-
 # Abstract and optional shortened version.
 abstract = ""
 abstract_short = ""
+
+# Dates
+filing_date = ""
+grant_date = ""
 
 # Does this page contain LaTeX math? (true/false)
 math = false
