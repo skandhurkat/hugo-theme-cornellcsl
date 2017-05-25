@@ -37,6 +37,8 @@ selected = false
 # Links (optional)
 doi = ""
 arXiv = ""
+google_patent = ""
+uspto = ""
 url_pdf = ""
 url_pdf_rel = ""
 url_code = ""

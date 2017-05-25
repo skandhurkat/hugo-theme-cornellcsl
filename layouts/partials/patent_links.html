@@ -6,6 +6,18 @@
   {{ i18n "btn_details" }}
 </a>
 {{ end }}
+{{ with $.Params.google_patent }}
+<a class="btn btn-primary btn-outline{{ if $is_list }} btn-xs{{end}}"
+	href="//patents.google.com/patent/{{ . }}" target="_blank" itemprop="sameAs">
+  Google Patents
+</a>
+{{ end }}
+{{ with $.Params.uspto }}
+<a class="btn btn-primary btn-outline{{ if $is_list }} btn-xs{{end}}"
+	href="//patft.uspto.gov/netacgi/nph-Parser?Sect2=PTO1&Sect2=HITOFF&p=1&u=/netahtml/PTO/search-bool.html&r=1&f=G&l=50&d=PALL&RefSrch=yes&Query=PN/{{ . }}" target="_blank" itemprop="sameAs">
+  USPTO
+</a>
+{{ end }}
 {{ with $.Params.doi }}
 <a class="btn btn-primary btn-outline{{ if $is_list }} btn-xs{{end}}" href="//dx.doi.org/{{ . }}" target="_blank" itemprop="sameAs">
   DOI

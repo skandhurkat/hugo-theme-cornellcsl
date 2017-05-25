@@ -8,9 +8,8 @@
     </span>,
   </span>
   <span itemprop="name"><i>{{ .Title | markdownify | plainify }}</i></span>, in
-  <span itemprop="isPartOf">{{ .Params.publication | markdownify }}</span>.
   <time datetime = "{{ .Date.Format "2006-01-02" }}" itemprop="datePublished">
     {{ .Date.Format "January, 2006" }}
   </time>
-  <p>{{ partial "publication_links" (dict "content" . "is_list" 1) }}</p>
+  <p>{{ partial "patent_links" (dict "content" . "is_list" 1) }}</p>
 </li>
