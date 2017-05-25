@@ -39,6 +39,17 @@
 - id: more_publications
   translation: More Publications
 
+# Patents widget
+
+- id: filing_date
+  translation: Filed
+
+- id: grant_date
+  translation: Granted
+
+- id: more_patents
+  translation: More Patents
+
 # Posts widget
 
 - id: continue_reading
