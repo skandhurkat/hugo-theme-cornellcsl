@@ -47,6 +47,9 @@
 - id: grant_date
   translation: Granted
 
+- id: more_patents
+  translation: More Patents
+
 # Posts widget
 
 - id: continue_reading
