@@ -35,9 +35,12 @@
 
     </div>
   </div>
-  <div class="col-xs-12 col-md-8" itemprop="description">
+  <div class="col-xs-12 col-md-8">
+    <div itemprop="description">
 
     {{ $page.Content }}
+
+    </div>
 
     <div class="row">
 
@@ -61,7 +64,7 @@
             <i class="fa-li fa fa-graduation-cap"></i>
             <div class="description">
               <p class="course">{{ .course }}{{ with .year }}, {{ . }}{{ end }}</p>
-              <p class="institution">{{ .institution }}</p>
+              <p class="institution"><span itemprop="alumniOf" itemscope itemtype="http://schema.org/EducationalOrganization"><span itemprop="name">{{ .institution }}</span></span></p>
             </div>
           </li>
           {{ end }}
