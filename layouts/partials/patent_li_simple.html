@@ -1,0 +1,22 @@
+<li itemscope itemtype="http://schema.org/ScholarlyArticle">
+  <i class="fa-li fa fa-file-text-o pub-icon" aria-hidden="true"></i>
+  <span class="pub-authors">
+    {{ with .Params.authors }}
+    <span itemprop="author">
+    {{- delimit . "</span>, <span itemprop=\"author\">" | markdownify -}}
+    {{ end -}}
+    </span>,
+  </span>
+  <span itemprop="name"><i>{{ .Title | markdownify | plainify }}</i></span>
+	{{- with .Params.filing_date -}}
+	, {{ i18n "filing_date"| lower -}}: <time datetime = "{{ . | dateFormat "2006-01-02" }}" itemprop="datePublished">
+    {{ . | dateFormat "January 02, 2006" -}}
+  </time>
+	{{- end -}}
+	{{- with .Params.grant_date -}}
+	, {{ i18n "grant_date"| lower -}}: <time datetime = "{{ . | dateFormat "2006-01-02" }}" itemprop="datePublished">
+    {{ . | dateFormat "January 02, 2006" -}}
+  </time>
+	{{- end -}}
+  <p>{{ partial "patent_links" (dict "content" . "is_list" 1) }}</p>
+</li>
