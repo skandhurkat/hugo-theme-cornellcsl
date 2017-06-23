@@ -18,15 +18,15 @@
 
   {{ $paginator := .Paginate .Data.Pages }}
   {{ range $paginator.Pages }}
-  <div>
+  <div itemscope itemtype="http://schema.org/BlogPosting">
     {{ if .Params.image }}
     <a href="{{ .Permalink }}">
-      <img src="{{ $.Site.BaseURL }}img/{{ .Params.image }}" class="article-banner">
+      <img itemprop="image" src="{{ $.Site.BaseURL }}img/{{ .Params.image }}" class="article-banner">
     </a>
     {{end}}
-    <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+    <h2><a itemprop="url" href="{{ .Permalink }}"><span itemprop="name headline">{{ .Title }}</span></a></h2>
     {{ partial "article_metadata" (dict "content" . "is_list" 1) }}
-    <div class="article-style"><p>
+    <div class="article-style" itemprop="articleBody"><p>
       {{ if .Params.summary }}
       {{ printf "%s" .Params.summary | markdownify }}
       {{ else if .Truncated }}
