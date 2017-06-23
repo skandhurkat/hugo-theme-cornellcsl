@@ -38,9 +38,20 @@
           {{ $.Scratch.Set "pubtype" 0 }}
         {{ end }}
 
-        <div class="grid-sizer col-md-12 isotope-item pubtype-{{ $.Scratch.Get "pubtype" }}">
-          <i class="fa fa-file-text-o" aria-hidden="true"
-             style="color:#03396c;font-size:80%;padding-top:6px; padding-right: 10px;"></i>{{ .Title }}
+        <div itemscope itemtype="http://schema.org/ScholarlyArticle" class="grid-sizer col-md-12 isotope-item pubtype-{{ $.Scratch.Get "pubtype" }}">
+          <i class="fa fa-file-text-o" aria-hidden="true" style="color:#03396c;font-size:80%;padding-top:6px; padding-right: 10px;"></i>
+          <span class="pub-authors">
+            {{ with .Params.authors }}
+            <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">
+            {{- delimit . "</span></span>, <span itemprop=\"author\" itemscope itemtype=\"http://schema.org/Person\"><span itemprop=\"name\">" | markdownify -}}
+            {{ end }}
+            </span>
+          </span>
+	  <span style="font-style:italic" itemprop="headline name">{{ .Title }}</span>
+          <span itemprop="isPartOf">{{ .Params.publication | markdownify }}</span>.
+          <time datetime = "{{ .Date.Format "2006-01-02" }}" itemprop="datePublished">
+            {{ .Date.Format "January, 2006" }}
+          </time>
           <p>{{ partial "publication_links" (dict "content" . "is_list" 1) }}</p>
         </div>
 
