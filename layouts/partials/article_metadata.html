@@ -4,7 +4,7 @@
 
   {{ with $.Params.author }}
   by <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name" class="article-authors">
-  {{- delimit . "</span></span>, <span itemprop=\"author\" itemscope itemtype=\"http://schema.org/Person\"><span itemprop=\"author\" class=\"article-authors\">" | markdownify -}}
+  {{- delimit . "</span></span>, <span itemprop=\"author\" itemscope itemtype=\"http://schema.org/Person\"><span itemprop=\"name\" class=\"article-authors\">" | markdownify -}}
   </span></span>.
   {{ end }}
   <span class="article-date">

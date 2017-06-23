@@ -12,10 +12,12 @@
 
     <div class="container pub-title">
       <h1 itemprop="name">{{ .Title }}</h1>
-      <span class="pub-authors" itemprop="author">
+      <span class="pub-authors" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">
       {{ with .Params.authors }}
-      {{ delimit . ", " | markdownify }}
+      {{- delimit . "</span></span>, <span class=\"pub-authors\" itemprop=\"author\" itemscope itemtype=\"http://schema.org/Person\"><span itemprop=\"name\">" | markdownify -}}
       {{ end }}
+        </span>
       </span>
       <span class="pull-right">
         {{ partial "share.html" . }}
