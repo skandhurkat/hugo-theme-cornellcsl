@@ -46,6 +46,28 @@
 
   <title>{{ if not .IsHome }}{{ .Title }} | {{ end }}{{ .Site.Title }}</title>
 
+  <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.css" />
+  <script src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.js"></script>
+  <script>
+  window.addEventListener("load", function(){
+  window.cookieconsent.initialise({
+    "palette": {
+      "popup": {
+        "background": "#ffffff",
+        "text": "#000000"
+      },
+      "button": {
+        "background": "#b31b1b",
+        "text": "#ffffff"
+      }
+    },
+    "showLink": false,
+    "content": {
+      "message": "This website uses cookies for analytics and to enable comments.",
+      "dismiss": "Cool! I get it."
+    }
+  })});
+  </script>
 </head>
 <body data-spy="scroll" data-target="#navbar-main" data-offset="71">
 
